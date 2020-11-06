@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 960px;
+  min-width: 400px;
+  border: 1px solid black;
+}
+.header {
+  width: 100%;
+  text-align: center;
+}
+.gamebody {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gamebody img {
+  width: 100px;
+}
+
+.game-ui {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats {
+  width: 40%;
+  height: 150px;
+  text-align: center;
+  background-color: green;
+  align-content: center;
+}
+
+.buttons {
+  width: 40%;
+  height: 150px;
+  text-align: center;
+  background-color: brown;
+  align-content: center;
+}
