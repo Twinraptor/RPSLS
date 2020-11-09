@@ -20,11 +20,12 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .gamebody img {
   width: 100px;
+  border-radius: 50%;
 }
 
 .game-ui {
@@ -46,4 +47,8 @@
   text-align: center;
   background-color: brown;
   align-content: center;
+}
+
+.gamebody img:hover {
+  box-shadow: 0px 10px 50px blue;
 }
