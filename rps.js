@@ -1,12 +1,11 @@
+let streak = 0;
+let longestStreak= 0;
+
 rpsls = (yourChoice) => {
-    console.log(yourChoice);
     let humanChoice = yourChoice.id;
     let botChoice = randomPick();
-    console.log(humanChoice,botChoice);
     results = decideWinner(humanChoice,botChoice);
-    console.log(results);
     message=finalResults(results);
-    console.log(message);
     rpslsEndDisplay(humanChoice, botChoice, message);
 }
 
@@ -86,4 +85,27 @@ rpslsEndDisplay = (humanChoice, botChoice, message) => {
     document.getElementById("gamebody1").appendChild(humanDiv);
     document.getElementById("gamebody1").appendChild(messageDiv);
     document.getElementById("gamebody1").appendChild(botDiv);
+
+    if (message["color"] == "red") {
+        streak = 0;
+    } else if (message["color"] == "green") {
+        streak++;
+    }
+    
+
+    document.getElementById("streak").innerHTML = "Win Streak " + streak; 
+    if (streak > longestStreak) {
+        longestStreak = streak;
+        document.getElementById("lStreak").innerHTML = "Longest Streak " + longestStreak;
+    }
+    
 }
+
+resetGame = () => {
+    document.getElementById("result1").remove();
+    document.getElementById("result2").remove();
+    document.getElementById("result3").remove();
+
+    document.getElementById("gamebody1").innerHTML = "<img id='rock' src='img/rock.svg' alt='' onclick='rpsls(this)'><img id='paper' src='img/paper.svg' alt='' onclick='rpsls(this)'><img id='scissors' src='img/scissors.svg' alt='' onclick='rpsls(this)'><img id='lizard' src='img/lizard.svg' alt='' onclick='rpsls(this)'><img id='spock' src='img/spock.svg' alt='' onclick='rpsls(this)'>"
+}
+
