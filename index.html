@@ -3,30 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="stylesheet.css">
-    <title>Rock, Paper, Scisor, Lizard, Spock</title>
+
+    <title>Rock Paper Scissors Spock Lizard</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+            <h1>Rock Paper Scissors Spock Lizard</h1>
         </div>
-        <div id="gamebody1" class="gamebody">
-            <img id="rock" src="img/rock.svg" alt="" onclick="rpsls(this)">
-            <img id="paper" src="img/paper.svg" alt="" onclick="rpsls(this)">
-            <img id="scissors" src="img/scissors.svg" alt="" onclick="rpsls(this)">
-            <img id="lizard" src="img/lizard.svg" alt="" onclick="rpsls(this)">
-            <img id="spock" src="img/spock.svg" alt="" onclick="rpsls(this)">
+        <div id="bottom-wrapper" class="row">
+            <div id="game-wrapper" class="col-md-8 col-sm-12">
+                <div id="play">
+                    <h1>Play the game here!</h1>
+                </div>
+                <div id="gamebody1" class="gamebody">
+                    <img id="rock" src="img/rock.svg" alt="" onclick="rpsls(this)">
+                    <img id="paper" src="img/paper.svg" alt="" onclick="rpsls(this)">
+                    <img id="scissors" src="img/scissors.svg" alt="" onclick="rpsls(this)">
+                    <img id="spock" src="img/spock.svg" alt="" onclick="rpsls(this)">
+                    <img id="lizard" src="img/lizard.svg" alt="" onclick="rpsls(this)">
+                </div>
+                <div id="game-ui1" class="game-ui">
+                    <div class="stats">
+                        <h3 id="streak">Win Streak 0</h3>
+                        <h3 id="lStreak">Longest Streak 0</h3>
+                    </div>
+                    <div class="buttons">
+                        <button id="playagain" onclick="resetGame()">Play Again</button>
+                    </div>
+                </div>
+                <div id="rules">
+                    <h4>
+                        <p>Rules:</p>
+                        <ul class="list-unstyled">
+                            <li>Scissors cuts Paper</li>
+                            <li>Paper covers Rock</li>
+                            <li>Rock crushes Lizard</li>
+                            <li>Lizard Poisons Spock</li>
+                            <li>Spock smashes Scissors</li>
+                            <li>Scissors decapitates Lizard</li>
+                            <li>Lizard eats Paper</li>
+                            <li>Paper disproves Spock</li>
+                            <li>Spock vaporizes Rock</li>
+                            <li>Rock crushes Scissors</li>
+                        </ul>
+                    </h4>
+                </div>
+            </div>
+            <div id="about" class="col-md-4 col-sm-12">
+                <p>Rock Paper Scissors Lizard Spock was created by Sam Kass and Karen Bryla. You can find the official website for RPSSL <a href="http://www.samkass.com/theories/RPSSL.html">here</a>.</p>
+                <p>Sam states that this game was invented to reduce the chances for draws when playing against opponents that were extremely familiar with each other. In fact, his claim is that it is about 75-80% of the matches end in a draw!</p>
+                <p>His local meta aside, some quick math shows that there are 9 potential game states. Three lead to a draw, three to a loss for P1 and three that end as a win for P1. This translates to 33.3% chance of a draw, win or loss. </p>
+                <p>The addition of additional wrinkles to the complexity of Rock, Paper, Scissors. do reduce the the odds for draws. With the addition of Lizard and Spock we now have a 20% chance for a draw.</p>
+            </div>
         </div>
-        <div id="game-ui1" class="game-ui">
-            <div class="stats">
-                <h3 id="streak">Win Streak 0</h3>
-                <h3 id="lStreak">Longest Streak 0</h3>
+        <div id="essay" class="row">
+            <div class="col-sm-12 col-md-12">
+                <p>This sounds more fun right? So if we add more moves and reduce the odds for draws it makes the game more exciting and fun? Maybe, maybe not? Depends on what you define as fun. If you like strictly more options, more DLC, or more to collect, having more moves is fun for you.</p>
+                <p>But is there a negative side to this? Gamers today understand the concept of antifun. While having more shiny new toys to play with is fun, remembering all the rules can be difficult.</p>
+                <p>In regular RPS, players have 3 options and have to remember 3 rules. This results in 9 possible outcomes with 3 winning, 3 losing and 3 draws. In fact that breaks down 3 (number of choices for player 1) x 3 (number of choices for player 2) - 3 (number of drawk options) / 2 (only half the outcomes need to be remembered, because the other half are just reversed). The formula turns out ((n*n)-n)/2</p>
+                <p>The problem is the n*n in the forumla. As you add options linearly. The outcomes one has to remember is exponential. The antifun quickly outweighs the fun.</p>
             </div>
-            <div class="buttons">
-                <button id="playagain" onclick="resetGame()">Play Again</button>
-            </div>
-
         </div>
     </div>
 </body>

@@ -79,7 +79,7 @@ rpslsEndDisplay = (humanChoice, botChoice, message) => {
     var botDiv = document.createElement('div');
 
     humanDiv.innerHTML = "<img id='result1' src='" + imagesDB[humanChoice] + "' alt='' >"
-    messageDiv.innerHTML = "<h1 id='result2' style='color:" + message["color"] + "; '>" + message["message"] + "</h1>"
+    messageDiv.innerHTML = "<h3 id='result2' style='color:" + message["color"] + "; '>" + message["message"] + "</h3>"
     botDiv.innerHTML = "<img id='result3' src='" + imagesDB[botChoice] + "' alt='' >"
     //show the two choices and message
     document.getElementById("gamebody1").appendChild(humanDiv);
